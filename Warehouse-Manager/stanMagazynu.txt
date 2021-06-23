@@ -1,0 +1,27 @@
+
+Pomieszczenie numer 0
+Wolne miejsce 84.0
+
+Dane najemcy {Wolne}
+
+Zawartosc[]
+
+
+
+Pomieszczenie numer 1
+Wolne miejsce 48.0
+
+Dane najemcy {Wolne}
+
+Zawartosc[]
+
+
+
+Pomieszczenie numer 2
+Wolne miejsce 12.0
+
+Dane najemcy {Wolne}
+
+Zawartosc[]
+
+

@@ -1,0 +1,24 @@
+Le perceptron est un algorithme d'apprentissage supervisé de classifieurs binaires (c'est-à-dire séparant deux classes).
+Il a été inventé en 1957 par Frank Rosenblatt1 au laboratoire d'aéronautique de l'université Cornell. Il s'agit d'un
+neurone formel muni d'une règle d'apprentissage qui permet de déterminer automatiquement les poids synaptiques de
+manière à séparer un problème d'apprentissage supervisé. Si le problème est linéairement séparable, un théorème assure
+que la règle du perceptron permet de trouver une séparatrice entre les deux classes.
+Le perceptron peut être vu comme le type de réseau de neurones le plus simple. C'est un classifieur linéaire. Ce type
+de réseau neuronal ne contient aucun cycle (il s'agit d'un réseau de neurones à propagation avant). Dans sa version
+simplifiée, le perceptron est mono-couche et n'a qu'une seule sortie (booléenne) à laquelle toutes les entrées
+(booléennes) sont connectées. Plus généralement, les entrées peuvent être des nombres réels.
+Une des plus anciennes traces du thème de « l’homme dans la machine » date de 800 avant notre ère, en Égypte. La statue
+du dieu Amon levait le bras pour désigner le nouveau pharaon parmi les prétendants qui défilaient devant lui, puis elle
+« prononçait » un discours de consécration. Les Égyptiens étaient probablement conscients de la présence d’un prêtre
+actionnant un mécanisme et déclarant les paroles sacrées derrière la statue, mais cela ne semblait pas être pour eux
+contradictoire avec l’incarnation de la divinité. Vers la même époque, Homère, dans L'Iliade (XVIII, 370–421), décrit
+les automates réalisés par le dieu forgeron Héphaïstos : des trépieds munis de roues en or, capables de porter des
+objets jusqu’à l’Olympe et de revenir seuls dans la demeure du dieu ; ou encore, deux servantes forgées en or qui
+l’assistent dans sa tâche. De même, le Géant de bronze Talos, gardien des rivages de la Crète, était parfois considéré
+comme une œuvre du dieu.
+Vitruve, architecte romain, décrit l’existence entre le iiie et le ier siècle avant notre ère, d’une école d’ingénieurs
+fondée par Ctesibius à Alexandrie, et concevant des mécanismes destinés à l’amusement tels des corbeaux qui chantaient.
+Héron L'Ancien décrit dans son traité « Automates », un carrousel animé grâce à la vapeur et considéré comme anticipant
+les machines à vapeur. Les automates disparaissent ensuite jusqu’à la fin du Moyen Âge. On a prêté à Roger Bacon la
+conception d'automates doués de la parole; en fait, probablement de mécanismes simulant la prononciation de certains
+mots simples.

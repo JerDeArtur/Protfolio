@@ -1,0 +1,8 @@
+Emotionale Intelligenz
+Auf diesem Gebiet leistet die Maschine bislang fast nichts. Der Mensch kann sich in einen anderen Menschen hineinfühlen, Sympathie und Empathie, Mitgefühl, Mitleid, Trauer, Angst, Freude empfinden, Liebesgedichte schreiben, Zornausbrüche haben usw. Was Maschinen heute allerdings schon in Ansätzen können, ist die sog. Sentimentanalyse, d. h. durch Beobachtung der menschlichen Körpersprache, also des Gesichts, der Gestik usw. die Emotionen eines Menschen „lesen“.
+
+Soziale Intelligenz
+Das ist die Fähigkeit, in einer menschlichen Gruppe angemessen zu (re-)agieren, etwa eine Stimmung zu erkennen oder konstruktiv zu beeinflussen, z. B. den Teamgeist. Eine Fähigkeit, die meist bei Unternehmern aber auch Politikern stark ausgeprägt ist. Auf diesem Gebiet kann die Maschine bislang nichts leisten.
+
+Bewusstsein bei künstlicher Intelligenz
+In den Neurowissenschaften ist es eine Grundannahme, dass das Bewusstsein ein Produkt unseres Gehirns ist (siehe Neuronales Korrelat des Bewusstseins). Nach Jürgen Schmidhuber ist das Bewusstsein nur ein Nebenprodukt des Problemlösens des Gehirns. So sei auch bei künstlichen Problemlösern (z. B. autonomen mobilen Robotern) von Vorteil, wenn diese sich ihrer selbst und ihrer Umgebung „bewusst“ seien. Schmidhuber bezieht sich bei „Bewusstsein“ im Kontext autonomer Roboter auf ein digitales Weltmodell inklusive des Systems selbst, nicht jedoch auf das Erleben von Zuständen. Ein Weltmodell könnte im Kontext von Reinforcement Learning dadurch erlernt werden, dass Aktionen belohnt werden, die das Weltmodell erweitern.[45]

@@ -1,0 +1,7 @@
+The main categories of networks are acyclic or feedforward neural networks (where the signal passes in only one direction) and recurrent neural networks (which allow feedback and short-term memories of previous input events). Among the most popular feedforward networks are perceptrons, multi-layer perceptrons and radial basis networks.[226] Neural networks can be applied to the problem of intelligent control (for robotics) or learning, using such techniques as Hebbian learning ("fire together, wire together"), GMDH or competitive learning.[227]
+
+Today, neural networks are often trained by the backpropagation algorithm, which had been around since 1970 as the reverse mode of automatic differentiation published by Seppo Linnainmaa,[228][229] and was introduced to neural networks by Paul Werbos.[230][231][232]
+
+Hierarchical temporal memory is an approach that models some of the structural and algorithmic properties of the neocortex.[233]
+
+To summarize, most neural networks use some form of gradient descent on a hand-created neural topology. However, some research groups, such as Uber, argue that simple neuroevolution to mutate new neural network topologies and weights may be competitive with sophisticated gradient descent approaches[citation needed]. One advantage of neuroevolution is that it may be less prone to get caught in "dead ends".[234]

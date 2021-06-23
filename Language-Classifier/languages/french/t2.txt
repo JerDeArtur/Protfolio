@@ -1,0 +1,23 @@
+Le perceptron peut être vu comme le type de réseau de neurones le plus simple. C'est un classifieur linéaire. Ce type
+de réseau neuronal ne contient aucun cycle (il s'agit d'un réseau de neurones à propagation avant). Dans sa version
+simplifiée, le perceptron est mono-couche et n'a qu'une seule sortie (booléenne) à laquelle toutes les entrées
+(booléennes) sont connectées. Plus généralement, les entrées peuvent être des nombres réels.
+Le perceptron est un algorithme d'apprentissage supervisé de classifieurs binaires (c'est-à-dire séparant deux classes).
+Il a été inventé en 1957 par Frank Rosenblatt1 au laboratoire d'aéronautique de l'université Cornell. Il s'agit d'un
+neurone formel muni d'une règle d'apprentissage qui permet de déterminer automatiquement les poids synaptiques de
+manière à séparer un problème d'apprentissage supervisé. Si le problème est linéairement séparable, un théorème assure
+que la règle du perceptron permet de trouver une séparatrice entre les deux classes.
+En 2005, le projet Blue Brain est lancé, il vise à simuler le cerveau des mammifères. Il s'agit d'une des méthodes
+envisagées pour réaliser une IA. Ils annoncent de plus comme objectif de fabriquer, dans dix ans, le premier « vrai »
+cerveau électronique23. En mars 2007, le gouvernement sud-coréen a annoncé que plus tard dans l'année, il émettrait une
+charte sur l'éthique des robots, afin de fixer des normes pour les utilisateurs et les fabricants. Selon Park Hye-Young,
+ du ministère de l'Information et de la communication, la Charte reflète les trois lois d'Asimov : la tentative de
+ définition des règles de base pour le développement futur de la robotique. En juillet 2009, en Californie une
+ conférence organisée par l'Association for the Advancement of Artificial Intelligence (AAAI), où un groupe
+ d'informaticiens se demande s'il devrait y avoir des limites sur la recherche qui pourrait conduire à la perte de
+ l'emprise humaine sur les systèmes informatiques, et où il est également question de l'explosion de l'intelligence (
+ artificielle) et du danger de la singularité technologique conduisant à un changement d'ère, ou de paradigme totalement
+  en dehors du contrôle humain24,25.
+En 2009, le Massachusetts Institute of Technology (MIT) a lancé un projet visant à repenser la recherche en intelligence
+ artificielle. Il réunira des scientifiques qui ont eu du succès dans des domaines distincts de l'IA. Neil Gershenfeld
+ déclare « Nous voulons essentiellement revenir 30 ans en arrière, et de revoir quelques directions aujourd'hui gelées »

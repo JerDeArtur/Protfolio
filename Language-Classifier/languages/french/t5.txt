@@ -1,0 +1,5 @@
+Apple a de son côté récemment acquis plusieurs start-up du secteur (Perceptio, VocalIQ, Emotient et Turi)40.
+
+En janvier 2018, des modèles d'intelligence artificielle développés par Microsoft et Alibaba réussissent chacun de leur côté à battre les humains dans un test de lecture et de compréhension de l'université Stanford. Le traitement du langage naturel imite la compréhension humaine des mots et des phrases et permet maintenant aux modèles d'apprentissage automatique de traiter de grandes quantités d'informations avant de fournir des réponses précises aux questions qui leur sont posées41.
+
+En février 2019, l'institut de recherche OpenAI annonce avoir créé un programme d’intelligence artificielle capable de générer des textes tellement réalistes que cette technologie pourrait être dangereuse42,43. Si le logiciel est utilisé avec une intention malveillante, il peut générer facilement des fausses nouvelles très crédibles. Inquiet par l'utilisation qui pourrait en être faite, OpenAI préfère ne pas rendre public le code source du programme44.

@@ -1,0 +1,24 @@
+In 1969 a famous book entitled Perceptrons by Marvin Minsky and Seymour Papert showed that it was impossible for these
+classes of network to learn an XOR function. It is often believed (incorrectly) that they also conjectured that a
+similar result would hold for a multi-layer perceptron network. However, this is not true, as both Minsky and Papert
+already knew that multi-layer perceptrons were capable of producing an XOR function. (See the page on Perceptrons (book)
+for more information.) Nevertheless, the often-miscited Minsky/Papert text caused a significant decline in interest and
+funding of neural network research. It took ten more years until neural network research experienced a resurgence in
+the 1980s. This text was reprinted in 1987 as \"Perceptrons - Expanded Edition\" where some errors in the original
+text are shown and corrected. The kernel perceptron algorithm was already introduced in 1964 by Aizerman et al.[5]
+Margin bounds guarantees were given for the Perceptron algorithm in the general non-separable case first by Freund and
+Schapire (1998),[1] and more recently by Mohri and Rostamizadeh (2013) who extend previous results and give new L1
+bounds.
+Artificial intelligence was founded as an academic discipline in 1955, and in the years since has experienced several
+waves of optimism,[9][10] followed by disappointment and the loss of funding (known as an "AI winter"),[11][12] followed
+ by new approaches, success and renewed funding.[10][13] For most of its history, AI research has been divided into
+ subfields that often fail to communicate with each other.[14] These sub-fields are based on technical considerations,
+ such as particular goals (e.g. "robotics" or "machine learning"),[15] the use of particular tools ("logic" or
+ artificial neural networks), or deep philosophical differences.[16][17][18] Subfields have also been based on social
+ factors (particular institutions or the work of particular researchers).[14]
+The traditional problems (or goals) of AI research include reasoning, knowledge representation, planning, learning,
+natural language processing, perception and the ability to move and manipulate objects.[15] General intelligence is
+among the field's long-term goals.[19] Approaches include statistical methods, computational intelligence, and
+traditional symbolic AI. Many tools are used in AI, including versions of search and mathematical optimization,
+artificial neural networks, and methods based on statistics, probability and economics. The AI field draws upon
+computer science, information engineering, mathematics, psychology, linguistics, philosophy, and many other fields.

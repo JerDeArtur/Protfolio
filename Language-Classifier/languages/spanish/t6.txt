@@ -1,0 +1,12 @@
+A finales de la década de 1950 y comienzos de la de 1960 Robert K. Lindsay desarrolla «Sad Sam», un programa para la lectura de oraciones en inglés y la inferencia de conclusiones a partir de su interpretación.
+En 1963 Quillian desarrolla las redes semánticas como modelo de representación del conocimiento.
+En 1964 Bertrand Raphael construye el sistema SIR (Semantic Information Retrieval) el cual era capaz de inferir conocimiento basado en información que se le suministra. Bobrow desarrolla STUDENT.
+A mediados de los años 60, aparecen los sistemas expertos, que predicen la probabilidad de una solución bajo un set de condiciones. Por ejemplo DENDRAL, iniciado en 1965 por Buchanan, Feigenbaum y Lederberg, el primer Sistema Experto, que asistía a químicos en estructuras químicas complejas, MACSYMA, que asistía a ingenieros y científicos en la solución de ecuaciones matemáticas complejas.
+Posteriormente entre los años 1968-1970 Terry Winograd desarrolló el sistema SHRDLU, que permitía interrogar y dar órdenes a un robot que se movía dentro de un mundo de bloques.
+En 1968 Marvin Minsky publica Semantic Information Processing.
+En 1968 Seymour Papert, Danny Bobrow y Wally Feurzeig desarrollan el lenguaje de programación LOGO.
+En 1969 Alan Kay desarrolla el lenguaje Smalltalk en Xerox PARC y se publica en 1980.
+En 1973 Alain Colmenauer y su equipo de investigación en la Universidad de Aix-Marseille crean PROLOG (del francés PROgrammation en LOGique) un lenguaje de programación ampliamente utilizado en IA.
+En 1973 Shank y Abelson desarrollan los guiones, o scripts, pilares de muchas técnicas actuales en Inteligencia Artificial y la informática en general.
+En 1974 Edward Shortliffe escribe su tesis con MYCIN, uno de los Sistemas Expertos más conocidos, que asistió a médicos en el diagnóstico y tratamiento de infecciones en la sangre.
+En las décadas de 1970 y 1980, creció el uso de sistemas expertos, como MYCIN: R1/XCON, ABRL, PIP, PUFF, CASNET, INTERNIST/CADUCEUS, etc. Algunos permanecen hasta hoy (Shells) como EMYCIN, EXPERT, OPSS.

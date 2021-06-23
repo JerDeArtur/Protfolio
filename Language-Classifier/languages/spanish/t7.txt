@@ -1,0 +1,9 @@
+El concepto de IA es aún demasiado difuso. Contextualizando, y teniendo en cuenta un punto de vista científico, podríamos definir esta ciencia como la encargada de imitar el cerebro, que no el cuerpo, de una persona en todas sus funciones. Estas pueden ser las ya existentes en el humano o bien otras novedosas e incorporadas en el desarrollo de una máquina inteligente.
+
+En relación a la conciencia y las emociones, y aunque por el momento la mayoría de los investigadores en el ámbito de la Inteligencia Artificial se centran sólo en el aspecto racional, hay expertos que consideran seriamente la posibilidad de incorporar componentes «emotivos» como indicadores de estado, a fin de aumentar la eficacia de los sistemas inteligentes en determinadas situaciones.
+
+Particularmente, en el caso de los robots móviles, es necesario que estos cuenten con algo similar a las emociones con el objeto de saber –en cada instante y como mínimo– qué hacer a continuación [Pinker, 2001, p. 481].
+
+Al tener «sentimientos» y, al menos potencialmente, «motivaciones», podrán actuar de acuerdo con sus «intenciones» [Mazlish, 1995, p. 318]. Así, se podría equipar a un robot con dispositivos que controlen su medio interno; por ejemplo, que «sientan hambre» al detectar que su nivel de energía está descendiendo o que «sientan miedo» cuando este esté demasiado bajo.
+
+Esta señal podría interrumpir los procesos de alto nivel y obligar al robot a conseguir el preciado elemento [Johnson-Laird, 1993, p. 359]. Incluso se podría introducir el «dolor» o el «sufrimiento físico», a fin de evitar las torpezas de funcionamiento como, por ejemplo, introducir la mano dentro de una cadena de engranajes o saltar desde una cierta altura, lo cual le provocaría daños irreparables.
