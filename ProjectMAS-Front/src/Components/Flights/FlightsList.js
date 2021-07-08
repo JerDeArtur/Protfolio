@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './FlightsList.css'
+import {FlightSelectorContext} from '../Flights/FlightSelectorContext'
 function FlightsList(props){
 
     const [flights,setFlights] = React.useState([])
@@ -8,14 +9,16 @@ function FlightsList(props){
     const [date,setDate] = React.useState('');
     const [update,setUpdate] = React.useState({})
 
+    const [flight,setFlight] = React.useContext(FlightSelectorContext)
+
     useEffect(()=>{
         fetch("http://localhost:50596/flights?from="+from+"&to="+to+"&date="+date).then(res => res.json())
         .then(body => {setFlights(body);}); 
-    },[props.page,update])
+    },[update])
 
     function selectFlight(event){
         if(window.confirm("Are you sure?")){
-            props.setFlight(flights[event.target.id]);
+            setFlight(flights[event.target.id]);
             props.setPage("ticketform");
         }
     }

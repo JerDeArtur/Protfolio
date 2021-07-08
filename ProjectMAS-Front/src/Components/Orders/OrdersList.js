@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
-import './FlightsList.css'
-import './TicketInfo.css'
-function OrdersList(props){
+import '../Flights/FlightsList.css'
+import '../Tickets/TicketInfo.css'
+import {UserContext} from '../LogIn/UserContext'
+import {SelectedOrderContext} from './OrdersContext'
 
+function OrdersList(props){
     const [orders,setOrders] = React.useState([])
+
+    const [user, setUser] = React.useContext(UserContext);
+    const [selOrder,setSelOrder] = React.useContext(SelectedOrderContext);
 
     useEffect(()=>{
             var url = 'http://localhost:50596/order';
@@ -17,13 +22,13 @@ function OrdersList(props){
                 alert('Bląd')
             };
             var a = {
-                "idPerson":props.user.idPerson
+                "idPerson":user.idPerson
             };
             request.send(JSON.stringify(a))
     },[props.page])
 
     function selectOrder(event){
-        props.setSelOrder(orders[event.target.id]);
+        setSelOrder(orders[event.target.id]);
         props.setPage("ticketsList");
         
     }

@@ -1,4 +1,7 @@
 import React from 'react'
+import {UserContext} from '../LogIn/UserContext'
+import {FlightSelectorContext} from '../Flights/FlightSelectorContext'
+import {CurrentOrderContext} from '../Orders/OrdersContext'
 
 function TicketForm(props){
 
@@ -10,6 +13,9 @@ function TicketForm(props){
     const [seats,setSeats] = React.useState('');
     const [airport,setAirport] = React.useState(0);
 
+    const [user,setUser] = React.useContext(UserContext);
+    const [flight,setFlight] = React.useContext(FlightSelectorContext)
+    const [order,setOrder] = React.useContext(CurrentOrderContext)
 
 
     function checkA(event){
@@ -47,14 +53,14 @@ function TicketForm(props){
         request.open('POST', url, true);
         request.setRequestHeader('Content-Type','application/json')
         request.onload = function() {
-            props.setOrder(JSON.parse(request.responseText));
+            setOrder(JSON.parse(request.responseText));
             props.setPage("flightsList")
         };
         request.onerror = function() {
             alert('Bląd')
         };
         var a = {
-            "idPerson":props.user.idPerson,
+            "idPerson":user.idPerson,
             "ticket" : {
                 "SeatsAmount" : passangers,
                 "Class": clas,
@@ -63,9 +69,9 @@ function TicketForm(props){
                 "AdditonalMeal" : meal,
                 "Seat" : seats,
                 "IdAirport" : airport,
-                "IdFlight" : props.flight.idFlight
+                "IdFlight" : flight.idFlight
             },
-            "idOrder" : props.order.idOrder
+            "idOrder" : order.idOrder
         };
         console.log(a);
         request.send(JSON.stringify(a))

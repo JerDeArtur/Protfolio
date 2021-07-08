@@ -1,8 +1,15 @@
 import React, { useEffect } from 'react';
-import './FlightsList.css'
+import '../Flights/FlightsList.css'
+import {UserContext} from '../LogIn/UserContext'
+import {CurrentOrderContext,SelectedOrderContext} from '../Orders/OrdersContext'
+import {SelectedTicketContext} from './TicketsContext'
 function TicketsList(props){
 
     const [tickets,setTickets] = React.useState([])
+    const [user,setUser] = React.useContext(UserContext)
+    const [order,setOrder] = React.useContext(CurrentOrderContext)
+    const [selOrder,setSelOrder] = React.useContext(SelectedOrderContext)
+    const [selTicket,setSelTicket] = React.useContext(SelectedTicketContext)
 
     useEffect(()=>{
             var url = 'http://localhost:50596/ticket/get';
@@ -16,14 +23,14 @@ function TicketsList(props){
                 alert('Bląd')
             };
             var a = {
-                "idPerson":props.user.idPerson,
-                "idOrder" : props.selOrder.idOrder
+                "idPerson": user.idPerson,
+                "idOrder" : selOrder.idOrder
             };
             request.send(JSON.stringify(a))
-    },[props.page,props.selOrder])
+    },[selOrder,user.idPerson])
 
     function selectTicket(event){
-        props.setSelTicket(tickets[event.target.id]);
+        setSelTicket(tickets[event.target.id]);
         props.setPage("ticketInfo");        
     }
 
@@ -35,15 +42,17 @@ function TicketsList(props){
             request.onload = function() {
                 if(request.status === 404)
                     alert("Already payed")
-                else
-                    props.setOrder({idOrder:0})
+                else{
+                    if(order.idOrder === selOrder.idOrder)
+                        setOrder({idOrder:0})
+                }
             };
             request.onerror = function() {
                 alert('Bląd')
             };
             var a = {
-                "idPerson":props.user.idPerson,
-                "idOrder" : props.selOrder.idOrder
+                "idPerson":user.idPerson,
+                "idOrder" : selOrder.idOrder
             };
             request.send(JSON.stringify(a))
     }
@@ -70,16 +79,16 @@ function TicketsList(props){
                          <div class="heading">Order details</div>
         <div class="tinputt">
             <div className="tinputc">
-                <div className="tinput">First Name: {props.user.name}</div>
-                <div className="tinput">Last Name: {props.user.surname}</div>
-                <div className="tinput">Created: {props.selOrder.creationDate}</div>
+                <div className="tinput">First Name: {user.name}</div>
+                <div className="tinput">Last Name: {user.surname}</div>
+                <div className="tinput">Created: {selOrder.creationDate}</div>
             </div>     
         </div>
         <div >
             <a style={style2} href="#" onClick={(event)=>{pay(event,'reserve')}}>Reserve</a>
             <a href="#" onClick={(event)=>{pay(event,'fully')}}>Pay Fully</a>
         </div>
-        <h5 style={style}>Status: {props.selOrder.payed?"Payed":"Not payed"}</h5>
+        <h5 style={style}>Status: {selOrder.payed?"Payed":"Not payed"}</h5>
         <br/>
         <div class="heading">Tickets</div>
             <div className="list-group">

@@ -1,5 +1,9 @@
 import React from 'react';
+import { UserContext } from './LogIn/UserContext';
+import {CurrentOrderContext} from './Orders/OrdersContext'
 function Navbar(props){
+    const [user,setUser] = React.useContext(UserContext);
+    const [order,setOrder] = React.useContext(CurrentOrderContext)
     var style ={
         'justify-content':'flex-end'
     }
@@ -20,10 +24,10 @@ function Navbar(props){
                         <a className="nav-link" href="#" onClick={()=>{props.setPage("ordersList")}} >Orders</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="#" onClick={()=>{props.setOrder({idOrder:0})}} >Create new order</a>
+                        <a className="nav-link" href="#" onClick={()=>{setOrder({idOrder:0})}} >Create new order</a>
                         </li>
                     </ul>
-                    {props.user.name}
+                    {user.name}
                     </div>
                 </div>
             </nav>

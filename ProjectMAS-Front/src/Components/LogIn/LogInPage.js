@@ -1,9 +1,11 @@
 import React from 'react';
 import './LogInPage.css';
+import { UserContext } from './UserContext';
 function LogInPage(props){
 
     const[login,setLogin] = React.useState('');
     const[password,setPassword] = React.useState('');
+    const [user,setUser] = React.useContext(UserContext);
 
     function loginHandler(){
         var url = 'http://localhost:50596/login';
@@ -11,7 +13,7 @@ function LogInPage(props){
         request.open('POST', url, true);
         request.setRequestHeader('Content-Type','application/json')
         request.onload = function() {
-            props.setUser(JSON.parse(request.responseText));
+            setUser(JSON.parse(request.responseText));
             props.setPage("flightsList")
         };
         request.onerror = function() {
