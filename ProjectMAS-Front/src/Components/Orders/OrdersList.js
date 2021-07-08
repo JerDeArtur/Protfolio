@@ -7,8 +7,8 @@ import {SelectedOrderContext} from './OrdersContext'
 function OrdersList(props){
     const [orders,setOrders] = React.useState([])
 
-    const [user, setUser] = React.useContext(UserContext);
-    const [selOrder,setSelOrder] = React.useContext(SelectedOrderContext);
+    const [user,] = React.useContext(UserContext);
+    const [,setSelOrder] = React.useContext(SelectedOrderContext);
 
     useEffect(()=>{
             var url = 'http://localhost:50596/order';
@@ -25,6 +25,7 @@ function OrdersList(props){
                 "idPerson":user.idPerson
             };
             request.send(JSON.stringify(a))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[props.page])
 
     function selectOrder(event){
@@ -37,13 +38,13 @@ function OrdersList(props){
 
     var style1 = {
         display : 'flex',
-        'justify-content' : 'space-between'
+        'justifyContent' : 'space-between'
     }
 
 
     var op = [];
     for (var i = 0; i < orders.length; i++) {
-        op.push(<div><button style={style1} type="button" onClick={(event)=>{selectOrder(event)}} id={i} className="list-group-item list-group-item-action">
+        op.push(<div key={orders[i].idOrder}><button style={style1} type="button" onClick={(event)=>{selectOrder(event)}} id={i} className="list-group-item list-group-item-action">
             Order ID: {orders[i].idOrder}      Created: {orders[i].creationDate}      Payed: {orders[i].payed?"True" : "False"}      Price: {orders[i].totalPrice}
             </button>
 </div>);
@@ -54,7 +55,7 @@ function OrdersList(props){
     return(
         <div className="orderslist">
 
-        <div class="heading">Orders</div>
+        <div className="heading">Orders</div>
             <div className="list-group">
                 {op}
             </div>

@@ -9,11 +9,12 @@ function FlightsList(props){
     const [date,setDate] = React.useState('');
     const [update,setUpdate] = React.useState({})
 
-    const [flight,setFlight] = React.useContext(FlightSelectorContext)
+    const [,setFlight] = React.useContext(FlightSelectorContext)
 
     useEffect(()=>{
         fetch("http://localhost:50596/flights?from="+from+"&to="+to+"&date="+date).then(res => res.json())
         .then(body => {setFlights(body);}); 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[update])
 
     function selectFlight(event){
@@ -25,7 +26,7 @@ function FlightsList(props){
 
     var op = [];
     for (var i = 0; i < flights.length; i++) {
-        op.push(<button type="button" onClick={(event)=>{selectFlight(event)}} id={i} className="list-group-item list-group-item-action">From: {flights[i].from}      To: {flights[i].to}      TakeOff: {flights[i].takeOffDate}      Landing: {flights[i].landingDate}      Price: {flights[i].price}</button>);
+        op.push(<button key={flights[i].idFlight} type="button" onClick={(event)=>{selectFlight(event)}} id={i} className="list-group-item list-group-item-action">From: {flights[i].from}      To: {flights[i].to}      TakeOff: {flights[i].takeOffDate}      Landing: {flights[i].landingDate}      Price: {flights[i].price}</button>);
     }
 
     return(

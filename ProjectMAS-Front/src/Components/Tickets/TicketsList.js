@@ -6,10 +6,10 @@ import {SelectedTicketContext} from './TicketsContext'
 function TicketsList(props){
 
     const [tickets,setTickets] = React.useState([])
-    const [user,setUser] = React.useContext(UserContext)
+    const [user,] = React.useContext(UserContext)
     const [order,setOrder] = React.useContext(CurrentOrderContext)
-    const [selOrder,setSelOrder] = React.useContext(SelectedOrderContext)
-    const [selTicket,setSelTicket] = React.useContext(SelectedTicketContext)
+    const [selOrder,] = React.useContext(SelectedOrderContext)
+    const [,setSelTicket] = React.useContext(SelectedTicketContext)
 
     useEffect(()=>{
             var url = 'http://localhost:50596/ticket/get';
@@ -59,25 +59,25 @@ function TicketsList(props){
 
     var op = [];
     for (var i = 0; i < tickets.length; i++) {
-        op.push(<button type="button" onClick={(event)=>{selectTicket(event)}} id={i} className="list-group-item list-group-item-action">
+        op.push(<button key={tickets[i].idTicket} type="button" onClick={(event)=>{selectTicket(event)}} id={i} className="list-group-item list-group-item-action">
             Ticket ID: {tickets[i].idTicket}      Passangers: {tickets[i].seatsAmount}      Approved: {tickets[i].approved?"True" : "False"}      Price: {tickets[i].flight.price}</button>);
     }
 
     var style = {
-        'margin-left' : '20px',
-        'margin-top' : '20px',
-        'margin-bottom' : '20px'
+        'marginLeft' : '20px',
+        'marginTop' : '20px',
+        'marginBottom' : '20px'
     }
 
     var style2 = {
-        'margin-right':'20px',
-        'margin-left':'20px'
+        'marginRight':'20px',
+        'marginLeft':'20px'
     }
 
     return(
         <div className="ticketslist">
-                         <div class="heading">Order details</div>
-        <div class="tinputt">
+                         <div className="heading">Order details</div>
+        <div className="tinputt">
             <div className="tinputc">
                 <div className="tinput">First Name: {user.name}</div>
                 <div className="tinput">Last Name: {user.surname}</div>
@@ -85,12 +85,14 @@ function TicketsList(props){
             </div>     
         </div>
         <div >
-            <a style={style2} href="#" onClick={(event)=>{pay(event,'reserve')}}>Reserve</a>
-            <a href="#" onClick={(event)=>{pay(event,'fully')}}>Pay Fully</a>
+            {// eslint-disable-next-line jsx-a11y/anchor-is-valid
+            <a style={style2} href="#" onClick={(event)=>{pay(event,'reserve')}}>Reserve</a>}
+            {// eslint-disable-next-line jsx-a11y/anchor-is-valid
+            <a href="#" onClick={(event)=>{pay(event,'fully')}}>Pay Fully</a>}
         </div>
         <h5 style={style}>Status: {selOrder.payed?"Payed":"Not payed"}</h5>
         <br/>
-        <div class="heading">Tickets</div>
+        <div className="heading">Tickets</div>
             <div className="list-group">
                 {op}
             </div>

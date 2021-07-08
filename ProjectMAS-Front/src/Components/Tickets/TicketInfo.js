@@ -5,17 +5,17 @@ import {SelectedTicketContext} from './TicketsContext'
 
 function TicketInfo(props){
     
-    const [user,setUser] = React.useContext(UserContext)
-    const [selTicket,setSelTicket] = React.useContext(SelectedTicketContext)
+    const [user,] = React.useContext(UserContext)
+    const [selTicket,] = React.useContext(SelectedTicketContext)
 
     var style = {
-        'margin-left' : '20px',
-        'margin-top' : '20px'
+        'marginLeft' : '20px',
+        'marginTop' : '20px'
     }
     return (
     <div className="ticketinfo">
-        <div class="heading">User details</div>
-        <div class="tinputt">
+        <div className="heading">User details</div>
+        <div className="tinputt">
             <div className="tinputc">
                 <div className="tinput">First Name: {user.name}</div>
                 <div className="tinput">Last Name: {user.surname}</div>

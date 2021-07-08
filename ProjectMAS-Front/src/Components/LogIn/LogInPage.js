@@ -5,7 +5,7 @@ function LogInPage(props){
 
     const[login,setLogin] = React.useState('');
     const[password,setPassword] = React.useState('');
-    const [user,setUser] = React.useContext(UserContext);
+    const [,setUser] = React.useContext(UserContext);
 
     function loginHandler(){
         var url = 'http://localhost:50596/login';
@@ -33,7 +33,8 @@ function LogInPage(props){
                         <input type="button" className="fi fourth" onClick={loginHandler} value="Log In"></input>
                     </form> 
                     <div id="formFooter">
-                        <a className="underlineHover" href="#">Forgot Password?</a>
+                        {// eslint-disable-next-line jsx-a11y/anchor-is-valid
+                        <a className="underlineHover" href="#">Forgot Password?</a>}
                     </div>
                 </div>
             </div>

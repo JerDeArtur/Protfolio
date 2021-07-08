@@ -13,8 +13,8 @@ function TicketForm(props){
     const [seats,setSeats] = React.useState('');
     const [airport,setAirport] = React.useState(0);
 
-    const [user,setUser] = React.useContext(UserContext);
-    const [flight,setFlight] = React.useContext(FlightSelectorContext)
+    const [user,] = React.useContext(UserContext);
+    const [flight,] = React.useContext(FlightSelectorContext)
     const [order,setOrder] = React.useContext(CurrentOrderContext)
 
 
@@ -99,18 +99,18 @@ function TicketForm(props){
                 <div className="col-md-6">
                     <label className="form-label">Baggage</label>
                     <select className="form-control" value={baggage} onChange={event=>setBaggage(event.target.value)}>
-                        <option value="0" selected>Nothing</option>
+                        <option value="0">Nothing</option>
                         <option value="1">Bagpack</option>
                         <option value="2">Large</option>
                     </select>
                 </div>
                 <div className="col-md-6">
-                        <label class="form-label" htmlFor="flexCheckDefault">Animals</label>
-                        <button type="button" class="form-control"  onClick={(event)=>checkA(event)} id="flexCheckDefault">False</button>
+                        <label className="form-label" htmlFor="flexCheckDefault">Animals</label>
+                        <button type="button" className="form-control"  onClick={(event)=>checkA(event)} id="flexCheckDefault">False</button>
                 </div>
                 <div className="col-md-6">
-                        <label class="form-label" htmlFor="flexCheckDefault">Additional meal</label>
-                        <button type="button" class="form-control"  onClick={(event)=>checkM(event)} id="flexCheckDefault">False</button>
+                        <label className="form-label" htmlFor="flexCheckDefault">Additional meal</label>
+                        <button type="button" className="form-control"  onClick={(event)=>checkM(event)} id="flexCheckDefault">False</button>
                 </div>
                 <div className="col-md-6">
                     <label className="form-label">Seats</label>
