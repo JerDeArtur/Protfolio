@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './FlightsList.css'
 import {FlightSelectorContext} from '../Flights/FlightSelectorContext'
+import {Link} from 'react-router-dom'
 function FlightsList(props){
 
     const [flights,setFlights] = React.useState([])
@@ -9,7 +10,7 @@ function FlightsList(props){
     const [date,setDate] = React.useState('');
     const [update,setUpdate] = React.useState({})
 
-    const [,setFlight] = React.useContext(FlightSelectorContext)
+    const [flight,setFlight] = React.useContext(FlightSelectorContext)
 
     useEffect(()=>{
         fetch("http://localhost:50596/flights?from="+from+"&to="+to+"&date="+date).then(res => res.json())
@@ -20,13 +21,8 @@ function FlightsList(props){
     function selectFlight(event){
         if(window.confirm("Are you sure?")){
             setFlight(flights[event.target.id]);
-            props.setPage("ticketform");
+            console.log(flight)
         }
-    }
-
-    var op = [];
-    for (var i = 0; i < flights.length; i++) {
-        op.push(<button key={flights[i].idFlight} type="button" onClick={(event)=>{selectFlight(event)}} id={i} className="list-group-item list-group-item-action">From: {flights[i].from}      To: {flights[i].to}      TakeOff: {flights[i].takeOffDate}      Landing: {flights[i].landingDate}      Price: {flights[i].price}</button>);
     }
 
     return(
@@ -56,7 +52,16 @@ function FlightsList(props){
                 </div>
             </section>
             <div className="list-group">
-                {op}
+                {flights.map((flight,i)=>(
+                    <Link to="/ticketform" style={{textDecoration : "none"}}>
+                        <button 
+                            key={flight.idFlight} 
+                            type="button" 
+                            onClick={(event)=>{selectFlight(event)}} 
+                            id={i} 
+                            className="list-group-item list-group-item-action">From: {flight.from}      To: {flight.to}      TakeOff: {flight.takeOffDate}      Landing: {flight.landingDate}      Price: {flight.price}</button>
+                    </Link>
+                ))}
             </div>
         </div>
     );

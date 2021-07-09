@@ -2,6 +2,7 @@ import React from 'react'
 import {UserContext} from '../LogIn/UserContext'
 import {FlightSelectorContext} from '../Flights/FlightSelectorContext'
 import {CurrentOrderContext} from '../Orders/OrdersContext'
+import {Link, withRouter} from 'react-router-dom'
 
 function TicketForm(props){
 
@@ -47,14 +48,14 @@ function TicketForm(props){
         setMeal(!meal)
     }
 
-    function submitHandler(){
+    function submitHandler(history){
         var url = 'http://localhost:50596/ticket';
         var request = new XMLHttpRequest();
         request.open('POST', url, true);
         request.setRequestHeader('Content-Type','application/json')
         request.onload = function() {
             setOrder(JSON.parse(request.responseText));
-            props.setPage("flightsList")
+            history.push('/flightslist')
         };
         request.onerror = function() {
             alert('Bląd')
@@ -84,6 +85,10 @@ function TicketForm(props){
     const style2 = {
         'marginTop' : '20px'
     }
+
+    const Button = withRouter(({history})=>(
+        <button style={style2} type="button" onClick={()=>{submitHandler(history)}} className="btn btn-primary">Submit</button>
+    ))
 
     return(
         <div style={style} className="ticketForm">
@@ -123,10 +128,12 @@ function TicketForm(props){
                 <div className="col-md-6">
                 </div>
                 <div  className="col-md-6">
-                    <button style={style2} type="button" onClick={()=>{props.setPage("flightsList")}}className="btn btn-danger">Cancel</button>
+                    <Link to="/flightslist" style={{textDecoration : "none"}}>
+                        <button style={style2} type="button" className="btn btn-danger">Cancel</button>
+                    </Link>
                 </div>
                 <div  className="col-md-6">
-                    <button style={style2} type="button" onClick={()=>{submitHandler()}} className="btn btn-primary">Submit</button>
+                    <Button/>
                 </div>
             </form>
 

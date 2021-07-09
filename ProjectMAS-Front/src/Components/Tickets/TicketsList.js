@@ -3,13 +3,14 @@ import '../Flights/FlightsList.css'
 import {UserContext} from '../LogIn/UserContext'
 import {CurrentOrderContext,SelectedOrderContext} from '../Orders/OrdersContext'
 import {SelectedTicketContext} from './TicketsContext'
+import {Link} from 'react-router-dom'
 function TicketsList(props){
 
     const [tickets,setTickets] = React.useState([])
     const [user,] = React.useContext(UserContext)
     const [order,setOrder] = React.useContext(CurrentOrderContext)
     const [selOrder,] = React.useContext(SelectedOrderContext)
-    const [,setSelTicket] = React.useContext(SelectedTicketContext)
+    const [selTicket,setSelTicket] = React.useContext(SelectedTicketContext)
 
     useEffect(()=>{
             var url = 'http://localhost:50596/ticket/get';
@@ -31,7 +32,7 @@ function TicketsList(props){
 
     function selectTicket(event){
         setSelTicket(tickets[event.target.id]);
-        props.setPage("ticketInfo");        
+        console.log(selTicket)
     }
 
     function pay(event,path){
@@ -94,10 +95,15 @@ function TicketsList(props){
         <br/>
         <div className="heading">Tickets</div>
             <div className="list-group">
-                {op}
+                {tickets.map((ticket,i)=>(
+                    <Link to="/ticketinfo" style={{textDecoration : "none"}}>
+                        <button key={ticket.idTicket} type="button" onClick={(event)=>{selectTicket(event)}} id={i} className="list-group-item list-group-item-action">
+                        Ticket ID: {ticket.idTicket}      Passangers: {ticket.seatsAmount}      Approved: {ticket.approved?"True" : "False"}      Price: {ticket.flight.price}</button>
+                    </Link>
+                ))}
             </div>
         </div>
-    );
+    )
 }
 
 export default TicketsList;

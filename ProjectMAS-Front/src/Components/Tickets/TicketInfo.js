@@ -2,6 +2,7 @@ import React from 'react'
 import './TicketInfo.css'
 import {UserContext} from '../LogIn/UserContext'
 import {SelectedTicketContext} from './TicketsContext'
+import {Link} from 'react-router-dom'
 
 function TicketInfo(props){
     
@@ -36,7 +37,9 @@ function TicketInfo(props){
             </div>       
         </div>
         <h5 style={style}>Status: {selTicket.approved?"Approved":"Reserved"}</h5>
-        <button style={style} type="button" onClick={()=>{props.setPage("ticketsList")}}className="btn btn-danger">Back</button>
+        <Link to="/ticketslist" style={{textDecoration : "none"}}>
+            <button style={style} type="button" className="btn btn-danger">Back</button>
+        </Link>
     </div>
     );
 }
